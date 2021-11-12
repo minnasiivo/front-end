@@ -11,13 +11,19 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,11 @@ import { MatSliderModule } from '@angular/material/slider';
     MatGridListModule,
     MatSlideToggleModule,
     MatCardModule,
-    MatSliderModule
+    MatSliderModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

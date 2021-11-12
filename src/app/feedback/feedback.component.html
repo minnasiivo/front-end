@@ -1,6 +1,8 @@
-<h1>feedback works! </h1>
-<div *ngFor="let question of questions">
-    <h2>{{question.ask}}</h2>
-    <mat-slider min="1" max="5" step="1" value="1" (input)="onInputChange($event, question)"></mat-slider>
-    {{question.answer}}
+<div id=palaute>
+    <h1>feedback works! </h1>
+    <div *ngFor="let question of questions">
+        <h2>{{question.ask}}</h2>
+        <mat-slider min="1" max="5" step="1" value="1" (input)="onInputChange($event, question)"></mat-slider>
+        {{question.answer}}
+    </div>
 </div>
