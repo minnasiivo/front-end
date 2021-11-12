@@ -1,0 +1,31 @@
+*{
+    margin:2%;
+}
+button{
+    border-radius: 4px;
+    background-color: aquamarine;
+    
+}
+button:hover{
+    background-color: lightsteelblue;
+}
+
+.calculator{
+    border: 1rem;
+    align-content: stretch;
+    width: 25%;
+    background-color: lightslategray;
+    margin-right: 5em;
+    height: 70%;
+    padding: 20px;
+
+}
+#myCounts{
+    border-width: 10rem;
+    border-color: black;
+    background-color: blanchedalmond;
+}
+p{
+    font-size: 20pt;
+    
+}

@@ -1,0 +1,15 @@
+<p>calculator!</p>
+
+<div class='calculator'>
+    <div id='myCounts'>
+        <mat-card>
+            <mat-card-title>{{result}}</mat-card-title>
+            <mat-card-subtitle>{{answer}}</mat-card-subtitle>
+        </mat-card>
+    </div>
+    <mat-grid-list cols="4" rowHeight="1:1">
+        <mat-grid-tile *ngFor="let button of buttons">
+            <button mat-raised-button (click)="calculatorClick(button)">{{button}}</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
