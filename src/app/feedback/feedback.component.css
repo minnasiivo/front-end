@@ -1,0 +1,16 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+}
+div{
+    margin-left: 15rem;
+}
+h1{
+    margin-left: 13rem;
+    margin-bottom: 1em;
+}
+
+body{
+    width: 70%;
+    margin: auto;
+}

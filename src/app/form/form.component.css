@@ -1,0 +1,61 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+}
+
+body{
+    width: 60%;
+    margin: auto;
+}
+form {
+    background-color:rgb(141, 171, 209);
+    max-width:37rem;
+    padding: 10px;
+}
+fieldset{
+    background-color: #42668a;
+border-radius: 10px;
+border-style: dotted;
+margin: 5px;
+}
+legend{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+input{
+    padding: 3%;
+    margin: 3px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color:cadetblue
+}
+input:focus, textarea:focus{
+    background-color: lightsteelblue;
+}
+
+input[type=submit]{
+    border-color:black;
+}
+label.label{
+    color:rgb(111, 111, 165)
+}
+input[type=text], input[type=email],input[type=p-id], input[type=user], input[type=password], input[type=firstName], input[type=lastName]{
+    width:92%;
+}
+textarea{
+    height: 150px;
+    resize: none;
+    min-width: 7em;
+}
+td{
+    padding-left:5px;
+    padding-right:5px;
+}
+button{
+    background-color: rgb(4, 41, 71);
+    color:white;
+    float: center;
+    margin: 5%;
+}

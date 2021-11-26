@@ -1,0 +1,95 @@
+<form (ngSubmit)="submit()" name="form1" #form1="ngForm">
+
+
+    <h1>Registration Form!</h1>
+    <div class="form-group">
+        <label for="firstName">First name:</label>
+        <input type="firstName" class="form-control" id="firstName" [(ngModel)]="person.firstName" name="firstName"
+            required #name='ngModel' minlength="2" ngModel pattern="[a-zA-Z- ]*">
+    </div>
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <p *ngIf="name.hasError('required')">Enter your first name!</p>
+        <p *ngIf="name.hasError('minlength')">Minimum 2 character required!</p>
+        <p *ngIf="name.hasError('pattern')">Name can contain only letters</p>
+    </div>
+
+
+    <div class="form-group">
+        <label for="lastName">Last name:</label>
+        <input type="lastName" class="form-control" id="lastName" [(ngModel)]="person.lastName" name="lastName"
+            #lastname='ngModel' required minlength="2" ngModel pattern="[a-zA-Z- ]*">
+    </div>
+    <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+        <p class="alert alert-danger" *ngIf="lastname.hasError('required')">Enter your last name!</p>
+        <p class="alert alert-danger" *ngIf="lastname.hasError('minlength')">Minimum 2 character required!</p>
+        <p *ngIf="name.hasError('pattern')">Name can contain only letters</p>
+    </div>
+
+
+    <div class="form-group">
+        <label for="p-id">Person ID:</label>
+        <input type="p-id" class="form-control" id="p-id" [(ngModel)]="person.id" name="id" #id='ngModel' required
+            minlength="11" ngModel
+            pattern="^(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])([5-9]\d\+|\d\d-|[01]\dA)\d{3}[\dA-Z]$">
+    </div>
+    <div *ngIf="id.invalid && (id.dirty || id.touched)" class="alert alert-danger">
+        <p class="alert alert-danger" *ngIf="id.hasError('required')">Enter your personal identification number!</p>
+        <p class="alert alert-danger" *ngIf="id.hasError('minlength')">personal identification number contains 11
+            characters!</p>
+    </div>
+
+
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="person.email" name="email" #email='ngModel'
+            required minlength="5" ngModel pattern="^\S+@\S+$">
+    </div>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+        <p class="alert alert-danger" *ngIf="email.hasError('required')">Enter your email address!</p>
+        <p class="alert alert-danger" *ngIf="email.hasError('minlength')">Give valid email!</p>
+        <p class="alert alert-danger" *ngIf="email.hasError('pattern')">invalid email address</p>
+    </div>
+
+
+    <div class="form-group">
+        <label for="user">User name:</label>
+        <input type="user" class="form-control" id="user" [(ngModel)]="person.userName" name="user" #user='ngModel'
+            required minlength="6">
+    </div>
+    <div *ngIf="user.invalid && (user.dirty || user.touched)" class="alert alert-danger">
+        <p class="alert alert-danger" *ngIf="user.hasError('required')">Enter your user name!</p>
+        <p class="alert alert-danger" *ngIf="user.hasError('minlength')">User name must contain atleast 6
+            characters!
+        </p>
+    </div>
+
+
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" [(ngModel)]="person.password" name="password"
+            #password='ngModel' required minlength="10" ngModel pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$">
+    </div>
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+        <p class="alert alert-danger" *ngIf="password.hasError('required')">Type your password here!</p>
+        <p class="alert alert-danger" *ngIf="password.hasError('minlength')">required minumum length 10 characters!
+        </p>
+        <p *ngIf="password.hasError('pattern')">Password must contain numbers and capital letters!</p>
+    </div>
+
+    <div class="form-group">
+        <label for="pwd2">Confirm password:</label>
+        <input type="password" class="form-control" id="pwd2" [(ngModel)]="person.password2" name="password2"
+            #password2='ngModel' required ngModel pattern="{{password.value}}">
+    </div>
+    <div *ngIf="password2.invalid && (password2.dirty || password2.touched)" class="alert alert-danger">
+        <p class="alert alert-danger" *ngIf="password2.hasError('required')">Passwords don't match</p>
+        <p class="alert alert-danger" *ngIf="password2.hasError('pattern')">Password must match!</p>
+    </div>
+
+
+    <div class="checkbox">
+        <label><input type="checkbox" required ngModel name=chechbox> I've read and understood the conditions</label>
+    </div>
+    <button type="submit" ng-model="button" [disabled]="form1.invalid" class="btn btn-default"
+        (click)="submit();form1.reset()">Submit</button>
+</form>

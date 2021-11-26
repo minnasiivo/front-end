@@ -1,6 +1,4 @@
-*{
-    margin:2%;
-}
+
 button{
     border-radius: 4px;
     background-color: aquamarine;
@@ -10,14 +8,17 @@ button:hover{
     background-color: lightsteelblue;
 }
 
+*{
+    margin: auto;
+}
 .calculator{
     border: 1rem;
-    align-content: stretch;
+    align-content:stretch;
     width: 25%;
     background-color: lightslategray;
-    margin-right: 5em;
-    height: 70%;
-    padding: 20px;
+    height: 75%;
+    padding: 2rem;
+    margin: auto;
 
 }
 #myCounts{

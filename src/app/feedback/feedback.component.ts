@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from '../question';
+import { DataService } from '../services/data.service';
 
 
 @Component({
@@ -15,11 +16,11 @@ export class FeedbackComponent implements OnInit {
   ];
 
 
-
-  constructor() {
-
-
+  constructor(private qData: DataService) {
+    this.questions = this.qData.getQuestions();
   }
+
+  //constructor() { }
 
   ngOnInit(): void {
   }
