@@ -4,6 +4,13 @@
     </button>
     <span>My App</span>
     <span class="example-spacer"></span>
+
+    <div *ngIf="userEmail$ | async">{{userEmail$ | async}}
+        <button class="mat-stroked-button" (click)='logOut()'>{{logoutText}}</button>
+    </div>
+    <div *ngIf="!(userEmail$ | async)">
+        <button class="mat-stroked-button" (click)='login()'>{{loginText}}</button>
+    </div>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>favorite</mat-icon>
     </button>
@@ -17,4 +24,8 @@
     <a routerLink="/form" routerLinkActive="active">Contact Form</a>
     <br>
     <a routerLink="/reactive-form" routerLinkActive="active">Contact Form(Reactive)</a>
+    <br>
+    <a routerLink="/cinema" routerLinkActibe="active">Finkino News</a>
+    <br>
+    <a routerLink="/login" routerLinkActibe="active">Login</a>
 </mat-menu>

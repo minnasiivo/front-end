@@ -1,0 +1,11 @@
+*{
+    max-width: 60%;
+    margin: auto;
+    
+}
+form{
+    background-color: cadetblue;
+    align-content: space-around;
+    text-align: start;
+}
+

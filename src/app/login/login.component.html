@@ -1,0 +1,22 @@
+<div>
+    <p>login works!</p>
+    <form name="form2" #form2="ngForm" (ngSubmit)="login()">
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input class="form-control" [(ngModel)]="email" required type="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input name="password" class="form-control" [(ngModel)]="password" required type="password">
+        </div>
+        <div class="form-group" id="buttonDiv">
+            <!-- <button type="submit" ngModel (click)='login()' [disabled]="form2.invalid">Login</button>-->
+            <button type="submit" ng-model="button" [disabled]="form2.invalid" (click)="login()">Log in</button>
+            <button (click)='cancel()'>Cancel</button>
+        </div>
+    </form>
+</div>
+
+<p>Form Status: {{ form2.status }}</p>
+
+<!-- -->

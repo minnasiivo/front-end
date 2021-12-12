@@ -9,11 +9,12 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./feedback.component.css']
 })
 export class FeedbackComponent implements OnInit {
-  questions: Array<Question> = [
+  questions: Array<Question>;
+  /*= [
     new Question("kysymys 1"),
     new Question("kysymys 2"),
     new Question("kysymys 3"),
-  ];
+  ];*/
 
 
   constructor(private qData: DataService) {

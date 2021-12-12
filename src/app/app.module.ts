@@ -12,15 +12,25 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { CinemaComponent } from './cinema/cinema.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { HttpClientModule } from '@angular/common/http';
+import { NewsFilterPipe } from './pipes/news-filter.pipe';
+import { MaintenanceComponent } from './maintenance/maintenance.component';
+import { LoginComponent } from './login/login.component';
+//import { AngularFireAuthModule } from '@angular/fire/auth';
+import { FirebaseApp } from '@angular/fire/app';
+import { AngularFireModule } from "@angular/fire/compat";
+import { environment } from '../environments/environment';
+import { MatDialogModule } from '@angular/material/dialog';
 
-
-
-
+import { AuthenticationServiceService } from "./services/authentication-service.service";
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +39,12 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     FeedbackComponent,
     ToolbarComponent,
     FormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    CinemaComponent,
+    NewsFilterPipe,
+    MaintenanceComponent,
+    LoginComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +60,13 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     MatMenuModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    MatExpansionModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
+    MatDialogModule,
+    //AngularFireAuthModule,
+
+
 
 
   ],

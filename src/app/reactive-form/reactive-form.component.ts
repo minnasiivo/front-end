@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,10 +13,11 @@ import { Validators, FormGroup, FormControl } from '@angular/forms';
 export class ReactiveFormComponent implements OnInit {
 
   profileForm!: FormGroup;
+  //router!: Router;
   private readonly id_pattern = RegExp(/^(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])([5-9]\d\+|\d\d-|[01]\dA)\d{3}[\dA-Z]$/);
   private readonly passwosr_pattern = RegExp(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$/)
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
 
   }
 
@@ -44,6 +46,7 @@ export class ReactiveFormComponent implements OnInit {
     this.updateProfile();
     this.profileForm.markAsPristine();
     this.profileForm.markAsUntouched();
+    this.router.navigate(['calculator']);
   }
 
 
