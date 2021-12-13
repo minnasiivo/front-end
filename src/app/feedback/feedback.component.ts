@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Question } from '../question';
 import { DataService } from '../services/data.service';
 
@@ -10,6 +11,7 @@ import { DataService } from '../services/data.service';
 })
 export class FeedbackComponent implements OnInit {
   questions: Array<Question>;
+  //questions$: Observable<any>;
   /*= [
     new Question("kysymys 1"),
     new Question("kysymys 2"),
@@ -19,6 +21,8 @@ export class FeedbackComponent implements OnInit {
 
   constructor(private qData: DataService) {
     this.questions = this.qData.getQuestions();
+    // this.questions$ = this.qData.getQuestions();
+
   }
 
   //constructor() { }

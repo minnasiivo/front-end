@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Question } from '../question';
 
 @Injectable({
@@ -6,7 +7,12 @@ import { Question } from '../question';
 })
 export class DataService {
 
-  constructor() { }
+  constructor() {
+    /*this.testi$.subscribe(x => {
+      this.questions = x;
+      console.log(this.testi$);
+    });*/
+  }
 
   questions: Array<Question> = [
     new Question("kysytään jotain"),
@@ -14,9 +20,14 @@ export class DataService {
     new Question("kysymys 3"),
   ];
 
+  //testi$!: Observable<any[]>;
 
-  getQuestions(): any {
 
+
+
+
+  getQuestions() /*: Observable<any>*/ {
+    // return this.testi$;
     return this.questions;
   }
 }

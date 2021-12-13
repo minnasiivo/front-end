@@ -28,7 +28,7 @@ import { FirebaseApp } from '@angular/fire/app';
 import { AngularFireModule } from "@angular/fire/compat";
 import { environment } from '../environments/environment';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatTableModule } from '@angular/material/table';
 import { AuthenticationServiceService } from "./services/authentication-service.service";
 import { DialogComponent } from './dialog/dialog.component';
 
@@ -44,7 +44,8 @@ import { DialogComponent } from './dialog/dialog.component';
     NewsFilterPipe,
     MaintenanceComponent,
     LoginComponent,
-    DialogComponent
+    DialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -64,6 +65,7 @@ import { DialogComponent } from './dialog/dialog.component';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     MatDialogModule,
+    MatTableModule
     //AngularFireAuthModule,
 
 

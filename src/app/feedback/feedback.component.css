@@ -2,14 +2,10 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: auto;
 }
-div{
-    margin-left: 15rem;
+#palaute{
+    text-align: center;
+    margin:auto;
 }
-h1{
-    margin-left: 13rem;
-    margin-bottom: 1em;
-}
-
 body{
     width: 70%;
     margin: auto;

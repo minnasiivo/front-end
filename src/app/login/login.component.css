@@ -1,11 +1,29 @@
 *{
-    max-width: 60%;
+    max-width: 85%;
     margin: auto;
+    
     
 }
 form{
     background-color: cadetblue;
     align-content: space-around;
     text-align: start;
+    max-width:60rem;
 }
-
+input{
+    
+    padding: 2%;
+     margin: 2px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color:cadetblue
+}
+input:focus, textarea:focus{
+    background-color: rgb(214, 245, 243);
+}
+h3{
+    margin-top: 2px;
+}
+button{
+    margin: 7px;
+}

@@ -1,3 +1,36 @@
-<p>maintenance works!</p>
+<div class="btn-text-center">
+    <p>This is the maintenance component accessable for authoriced persons only!</p>
+    <button type="button" class="btn btn-primary" (click)='logout()'>Logout</button>
+    <table mat-table [dataSource]="dataSource" class='mat-elevation-z8'>
 
-<button (click)='logout()'>Logout</button>
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+            <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let question of Question"> {{question}} </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+        <!--
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> name </th>
+
+            <td mat-cell *matCellDef="let element">
+                <div *ngIf="!editing"> {{Question.name}} </div>
+                <div *ngIf="editing"> <input matInput [(ngModel)]="Question.name"> </div>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)='action(row)'></tr>-->
+
+    </table>
+</div>

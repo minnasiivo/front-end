@@ -2,11 +2,13 @@
 <input matInput placeholder="Kirjoita hakusana" [(ngModel)]="searchTerm">
 
 <mat-accordion>
-    <mat-expansion-panel *ngFor="let item of cinemaData$ | async | NewsFilter: searchTerm"> ">
+    <mat-expansion-panel *ngFor="let item of cinemaData$ | async | NewsFilter: searchTerm">
         <!--| newsFilter: searchTerm-->
         <mat-expansion-panel-header>
             <mat-panel-title>
-                {{item.Title}}
+                <h5>{{item.Title}}</h5>
+                <span class="example-spacer"></span>
+                <span>{{item.PublishDate | date: "dd.MM.yyyy"}}</span>
             </mat-panel-title>
         </mat-expansion-panel-header>
         {{item.HTMLLead}}
